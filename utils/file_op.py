@@ -19,7 +19,7 @@ def load_config(file):
     load configuration file
     """
     with open(file, 'r') as stream:
-        return yaml.load(stream, Loader=yaml.FullLoader)
+        return yaml.load(stream, Loader=yaml.SafeLoader)
 
 
 def sava_checkpoint(state_dict, path, prefix):
